@@ -153,10 +153,7 @@ public class FundingRaisedTest{
             assertEquals(row.get("funded_date"), "1-Dec-06");
             assertEquals(row.get("raised_amount"), "8500000");
             assertEquals(row.get("round"), "b");
-        } catch(IOException e) {
-            System.out.print(e.getMessage());
-            System.out.print("error");
-        } catch(NoSuchEntryException e) {
+        } catch(IOException | NoSuchEntryException e) {
             System.out.print(e.getMessage());
             System.out.print("error");
         }
